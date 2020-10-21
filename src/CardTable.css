@@ -1,3 +1,7 @@
-.CardTable {
+body {
+    background-color: rgb(19, 122, 64);
+}
+
+.CardStack {
     position: relative;
 }

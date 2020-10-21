@@ -23,7 +23,7 @@ const DrawBtn = ({ addCard }) => {
         const {
             data: { cards, remaining },
         } = await axios.get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`);
-        console.log(remaining);
+
         if (remaining > 0) {
             // create a card component
             const card = <Card cardData={cards[0]} />;
@@ -35,6 +35,7 @@ const DrawBtn = ({ addCard }) => {
         }
     };
 
+    // if there are cards remaining, display draw button, else display error message
     return btnDisplay ? (
         <div className="DrawBtn">
             <button onClick={handleClick}>Gimme A Card!</button>
